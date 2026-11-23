@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rendering Engine</title>
+    <link rel="stylesheet" href="../css/gamePagestyle.css">
+</head>
+<body>
+    
+    <div class="container">
+        <h1 id="name">Diego Martinez</h1>
+
+        <div class="navbar">
+            <a href="../index.html">Home</a> <span class="separator">/</span>
+            <a href="moreaboutme.html">More About Me</a> <span class="separator">/</span>
+            <a href="../gamedevelopment.html">Game Development</a> <span class="separator">/</span>
+        </div>
+    </div>
+
+    <h2 class="project-title">Rendering Engine</h2>
+
+    <h2>Demo Video</h2>
+
+
+    <div class="video-wrapper">
+            <iframe 
+            width="878" 
+            height="472" 
+            src="https://www.youtube.com/embed/-JvN0vQo2WA" 
+            title="Custom Rendering Engine" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen>
+            </iframe>
+    </div>
+
+    <section class="project-page-content">
+
+        <h3>About This Project</h3>
+            
+            <p>
+                This project involved developing a custom rendering engine using a foundational repository by the professor, using C++ and DirectX11, focusing on efficient graphics pipeline 
+                implementation and real-time rendering capabilities in my introduction to game graphics programming course. The engine was designed to handle 3D shapes, textures, 
+                PBR lighting, Shadow mapping, and post-processing, providing a foundation for future game development projects. The project emphasized the importance of understanding low-level 
+                graphics programming concepts and optimizing rendering performance such as a Constant Buffer.
+            </p>
+
+        <h3>My Process & Contributions</h3>
+            
+            <p>
+                I was responsible for implementing the core rendering logic, including the graphics pipeline, shader management, and resource handling to move the project to the current state in the video. 
+                I started off with a single 2D triangle and gradually expanded the engine to support more complex 3D models and effects. First, I was learning the basics of DirectX11 and how to set up a rendering
+                context,then I moved on to implementing the graphics pipeline, which involved creating vertex and pixel shaders, setting up buffers, and managing resources. In addtition, with complex shape I inculded a 
+                camera system to allow for dynamic viewing of the 3D scenes, enabling users to navigate and explore the rendered environments. I included the tinyobjkoader library to load 3D models in the OBJ format, 
+                allowing for the integration of complex shapes and textures into the rendering engine. Along with it, I implemented a Constant Buffer to efficiently pass data to the GPU, optimizing the rendering performance 
+                and ensuring smooth frame rates during real-time rendering. I also worked on implementing lighting models, including PBR (Physically Based Rendering) techniques, to achieve realistic lighting effects 
+                in the rendered scenes. Additionally, I implemented shadow mapping to enhance the visual depth and realism of the scenes. Finally, I added post-processing effects to improve the overall visual 
+                quality of the rendered output such as blur and height based and exponential fog.
+            </p>
+
+
+        <h3>Results & Takeaways</h3>
+            
+            <p>
+                The project was successful in achieving its goals of implementing a functional rendering engine with support for 3D graphics, textures, and advanced lighting effects. 
+                The implementation of the graphics pipeline and shader management provided a solid foundation for future development. The use of the tinyobjloader library allowed for 
+                seamless integration of complex 3D models, while the Constant Buffer implementation optimized rendering performance. The addition of post-processing effects enhanced 
+                the overall visual quality of the rendered output. With this project, I gained valuable experience in low-level graphics programming, shader development, and 
+                real-time rendering techniques. I hope to continue building upon this foundation in future game development projects, further exploring advanced rendering techniques 
+                and optimizations using DirectX12 and Vulkan which are industry standards.
+            </p>
+
+    </section>
+</body>
+</html>

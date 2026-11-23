@@ -1,0 +1,253 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    background-color: black;
+}
+
+#name
+{
+    font-size: 30px;
+    color: red;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+
+
+
+
+
+
+
+/* Center the navbar and set font styling */
+.navbar, .container {
+    text-align: center;
+    margin-top: 20px;
+    font-family: sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Style the links */
+.navbar a {
+    color: rgb(201, 0, 0);
+    text-decoration: none;
+    padding: 0 6px;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.navbar a:hover {
+    color:  rgb(107, 1, 1);
+    text-shadow: 0 0 25px  rgb(60, 0, 0),
+                 0 0 50px  rgb(60, 0, 0);
+    transform: scale(1.1);
+}
+
+/* Style the slash separators */
+.navbar .separator {
+    color: red;
+    font-weight: normal;
+    user-select: none;
+}
+
+h1 {
+    color: rgb(201, 0, 0);
+    text-align: center;
+    margin-top: 40px;
+    font-size: 36px;
+}
+
+.aboutSection {
+  display: flex;
+  align-items: center;
+  min-height: 200px;
+  margin-top: 4rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+
+.aboutSection-image,
+.aboutSection-text {
+  flex: 1;              /* each takes half the width */
+}
+
+.aboutSection-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 100px;
+  object-fit: cover;    /* fills the space without stretching */
+}
+
+.aboutSection-text {
+  padding: 1rem 1rem;
+}
+
+.aboutSection-text h2 {
+  font-size: 30px;
+  font-weight: 400;
+  margin: 0 0 1rem;
+  color: rgb(201, 0, 0);
+}
+
+.aboutSection-text h3 {
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin: 0 0 1rem;
+  color: rgb(201, 0, 0);
+}
+
+.aboutSection-text p {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: white;
+  margin: 0;
+}
+
+/* Stack vertically on small screens */
+@media (max-width: 700px) {
+  .aboutSection {
+    flex-direction: column;
+  }
+  .aboutSection-text {
+    padding: 2rem;
+  }
+}
+
+
+
+.img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.profile-image {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 30px;
+}
+
+.about-me {
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.professional-experience {
+    margin-top: 40px;
+    text-align: center;
+    margin-top: 40px;
+    color: white;
+    font-size: 15px;
+    line-height: 1.6;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.project-experience {
+    margin-top: 40px;
+    text-align: center;
+    justify-content: center; /* Centers the row of cards */
+    align-items: center;
+    gap: 30px; /* Space between the cards */
+    flex-wrap: wrap; /* Wraps to the next line on smaller screens */
+    padding: 40px;
+    color: white;
+}
+
+.projects-container {
+    display: flex;
+    justify-content: center; /* Centers the row of cards */
+    align-items: center;
+    gap: 30px; /* Space between the cards */
+    flex-wrap: wrap; /* Wraps to the next line on smaller screens */
+    padding: 40px;
+}
+
+/* 1. Container for the whole card */
+.project-card {
+    position: relative;
+    width: 300px; /* Adjust size as needed */
+    height: 200px; /* Adjust size as needed */
+    overflow: hidden; /* Hides content before it slides in */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+/* 2. The base image */
+.project-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+/* 3. The overlay container (hidden to the left by default) */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    color: white;
+    padding: 30px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers text vertically */
+    
+    /* SIDE HOVER SETUP: Start the box off-screen to the left and invisible */
+    opacity: 0;
+    transform: translateX(-100%); /* Moves the element left by its full width */
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+
+/* 4. Trigger the hover effect */
+.project-card:hover .overlay {
+    /* Bring it back to its original position and fade in */
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.project-card:hover img {
+    transform: scale(1.05); /* Optional zoom effect on image */
+}
+
+/* 5. Text styling for the overlay */
+.overlay h3 {
+    margin: 0 0 10px 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.overlay .meta {
+    margin: 0 0 15px 0;
+    font-size: 14px;
+    font-style: italic;
+    opacity: 0.9;
+}
+
+.overlay .description {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.4;
+}
